@@ -1,8 +1,15 @@
 package org.launchcode.models;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class User {
+    @NotBlank
+    @Size(min = 5, max = 15)
     private String username;
+
     private String email;
+    @NotBlank
     private String password;
 
     public User() {
